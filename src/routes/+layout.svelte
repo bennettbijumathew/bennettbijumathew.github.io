@@ -1,6 +1,7 @@
 <script lang="ts">
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
+    import PageNav from '$lib/components/page-nav.svelte';
 	let { children } = $props();
 </script>
 
@@ -8,17 +9,7 @@
 
 
 <div class="flex flex-col flex-1">
-    <div class="border p-4 flex justify-between">
-        <a href="/"> Bennett Biju Mathew </a>
-
-        <nav class="flex gap-x-2">
-            <a href="/skills"> Skills </a>
-            <a href="/portfolio"> Portfolio </a>
-            <a href="/volunteering"> Volunteering </a>
-            <a href="/work"> Work </a>
-            <a href="/contact"> Contact </a>
-        </nav>
-    </div>
+    <PageNav/>
 
     {@render children()}
 </div>

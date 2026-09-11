@@ -2,7 +2,7 @@
     import { ArrowRight, CornerDownRight, Menu } from "@lucide/svelte";
 	import { fade, fly, slide } from 'svelte/transition';
 	import { page } from '$app/state';
-    import type { RouteId } from '$app/types';
+    import { resolve } from '$app/paths';
 
     // Controls the state of the navigation panel being open / closed.
     let isPanelOpen = $state(false)
@@ -13,7 +13,7 @@
 
     // List of Menu items
     type NavMenu = {
-        link: RouteId, 
+        link: string, 
         name: string,
         focusedStyle: string,
         unfocusedStyle: string
@@ -21,37 +21,37 @@
 
     const navMenu: NavMenu[] = [
         { 
-            link: '/', 
+            link: resolve('/'), 
             name: 'Home', 
             focusedStyle: 'bg-purple-400', 
             unfocusedStyle: 'border border-purple-500 group-hover:bg-purple-500' 
         },
         { 
-            link: '/skills', 
+            link: resolve('/skills'), 
             name: 'Skills', 
             focusedStyle: 'bg-red-400', 
             unfocusedStyle: 'border border-red-500 group-hover:bg-red-500' 
         },
         { 
-            link: '/portfolio', 
+            link: resolve('/portfolio'), 
             name: 'Portfolio', 
             focusedStyle: 'bg-orange-400', 
             unfocusedStyle: 'border border-orange-500 group-hover:bg-orange-500' 
         },
         { 
-            link: '/volunteering', 
+            link: resolve('/volunteering'), 
             name: 'Volunteering', 
             focusedStyle: 'bg-yellow-400', 
             unfocusedStyle: 'border border-yellow-500 group-hover:bg-yellow-500' 
         },
         { 
-            link: '/work', 
+            link: resolve('/work'), 
             name: 'Work', 
             focusedStyle: 'bg-green-400', 
             unfocusedStyle: 'border border-green-500 group-hover:bg-green-500' 
         },
         { 
-            link: '/contact', 
+            link: resolve('/contact'), 
             name: 'Contact', 
             focusedStyle: 'bg-blue-400', 
             unfocusedStyle: 'border border-blue-500 group-hover:bg-blue-500' 

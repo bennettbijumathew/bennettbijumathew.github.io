@@ -1,13 +1,19 @@
 import adapter from '@sveltejs/adapter-static';
 
+const dev = process.argv.includes('dev');
+
 const config = {
 	kit: {
 		adapter: adapter({
-			fallback: '404.html'
-		}),
+            pages: 'build',
+            assets: 'build',
+            fallback: 'index.html',
+            precompress: false,
+            strict: true
+        }),
 		paths: {
-			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
-		}
+            base: dev ? '' : process.env.BASE_PATH || ''		
+        }
 	}
 };
 

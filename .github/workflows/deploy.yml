@@ -21,7 +21,8 @@ jobs:
       - name: Install dependencies
         run: npm i
 
-      - name: build
+      - name: Building static website
+        id: build
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
         run: |

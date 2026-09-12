@@ -67,7 +67,7 @@
     p-4
 ">
     <a 
-        href="/"
+        href={resolve("/")}
         class="font-instrument text-xl"
     >
         Bennett Biju Mathew 

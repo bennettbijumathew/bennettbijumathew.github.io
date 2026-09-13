@@ -9,7 +9,8 @@ const config = {
             pages: 'build',
             assets: 'build',
             precompress: false,
-            strict: true
+            strict: true,
+            fallback: 'error'
         }),
 		paths: {
             base: dev ? '' : process.env.BASE_PATH || ''		

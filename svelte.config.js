@@ -10,7 +10,7 @@ const config = {
             assets: 'build',
             precompress: false,
             strict: true,
-            fallback: '404.html'
+            fallback: 'index.html'
         }),
 		paths: {
             base: dev ? '' : process.env.BASE_PATH || ''		

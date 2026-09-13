@@ -62,7 +62,7 @@
 <header class="
     flex items-center justify-between 
     h-18 w-full 
-    fixed top-0 left-0 z-20
+    sticky top-0 left-0 z-20
     bg-taupe-800 text-taupe-200 
     p-4
 ">

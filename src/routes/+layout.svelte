@@ -4,8 +4,6 @@
     import PageNav from '$lib/components/page-nav.svelte';
 
 	let { children } = $props();
-
-    export const prerender = true;
 </script>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>

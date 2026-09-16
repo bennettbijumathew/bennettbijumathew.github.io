@@ -22,7 +22,7 @@
     >   
         <!-- The image related to the route -->
         <img
-            src={testImage}
+            src={route.image === undefined ? testImage : route.image}
             alt="test"
             class="
                 flex-1 

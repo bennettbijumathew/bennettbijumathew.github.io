@@ -1,9 +1,16 @@
 import { resolve } from "$app/paths";
+import contactImage from "$lib/assets/contact.jpg"
+import workImage from "$lib/assets/work.jpg"
+import volunteeringImage from "$lib/assets/volunteering.jpg"
+import skillsImage from "$lib/assets/skills2.jpg"
+import portfolioImage from "$lib/assets/portfolio.jpg"
+
 
 export type Route = {
     link: string, 
     name: string,
     mainColor: string,
+    image?: string
 }
 
 export const routes: Record<string, Route> = {
@@ -15,26 +22,31 @@ export const routes: Record<string, Route> = {
     skills: {
         link: resolve('/skills'), 
         name: 'Skills', 
-        mainColor: 'red-400', 
+        mainColor: 'orange-300', 
+        image: skillsImage
     },
     portfolio: { 
         link: resolve('/portfolio'), 
         name: 'Portfolio', 
-        mainColor: 'orange-400', 
+        mainColor: 'cyan-600', 
+        image: portfolioImage
     },
     volunteering: { 
         link: resolve('/volunteering'), 
         name: 'Volunteering', 
-        mainColor: 'yellow-400', 
+        mainColor: 'red-500', 
+        image: volunteeringImage
     },
     work: { 
         link: resolve('/work'), 
         name: 'Work', 
-        mainColor: 'green-400', 
+        mainColor: 'amber-50', 
+        image: workImage
     },
     contact: { 
         link: resolve('/contact'), 
         name: 'Contact', 
-        mainColor: 'blue-400', 
+        mainColor: 'yellow-600', 
+        image: contactImage
     }
 }

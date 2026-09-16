@@ -8,8 +8,6 @@
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
-<div class="flex flex-col flex-1">
-    <PageNav/>
+<PageNav/>
 
-    {@render children()}
-</div>
+{@render children()}
